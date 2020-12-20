@@ -25,13 +25,13 @@ public class AirplaneSeatingFinal {
       Scanner sc = new Scanner(System.in);
 
       System.out.println("Enter the airplane seat layout details: ");
-      String seatLayoutString = "[[3,22],[4,13],[2,33],[3,43]]";
-      //       seatLayoutString = sc.nextLine();
+      //String seatLayoutString = "[[3,22],[4,13],[2,33],[3,43]]";
+      String seatLayoutString = sc.nextLine();
       LinkedHashMap<Integer, Seating> seatings = getZoneDetailsFromString(seatLayoutString);
 
       System.out.println("Enter the number of passengers: ");
-      //      totalPassenger = sc.nextInt();
-      Integer totalPassenger = 530;
+      Integer totalPassenger = sc.nextInt();
+      //Integer totalPassenger = 530;
 
       List<Seat> filledSeats =
               passengerSeatAllocation.fillSeatsWithPassengers(seatings, totalPassenger);
